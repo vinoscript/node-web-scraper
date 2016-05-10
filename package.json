@@ -1,0 +1,26 @@
+{
+  "name": "node-web-scraper",
+  "version": "1.0.0",
+  "description": "Node Web Scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinoscript/node-web-scraper"
+  },
+  "keywords": [
+    "webscraper"
+  ],
+  "author": "wsb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinoscript/node-web-scraper/issues"
+  },
+  "homepage": "https://github.com/vinoscript/node-web-scraper",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "request": "^2.72.0"
+  }
+}
