@@ -6,6 +6,7 @@ var pathMain = 'http://substack.net/images/';
 var pathPrefix = 'http://substack.net';
 var urls = [];
 
+
 function getUrlPath(path){ 
   request(path, function (error, response, body) {
     if (!error && response.statusCode == 200) {
@@ -23,9 +24,10 @@ function getUrlPath(path){
 
         if( filePattern.test(url) ){
           urls.push(url);
-          // console.log(url);
 
-          fs.writeFile("images.csv", urls, function(err) {
+          var outputString = urls.join('\n');
+
+          fs.writeFile("images.csv", outputString, function(err) {
               if(err) {
                 return console.log(err);
               }
@@ -48,7 +50,6 @@ function getUrlPath(path){
 
   })
 }
-
 
 
 getUrlPath(pathMain);
